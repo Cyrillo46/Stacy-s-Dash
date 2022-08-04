@@ -13,6 +13,16 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  text-shadow: 1px 1px 2px #474747;
+}
+
+#photo-credit {
+  color: white;
+  margin: 1em;
+  padding: 0.5em;
+  font-size: 1.5em;
+  position: absolute;
+  top: 35em;
 }
 
 /* 
