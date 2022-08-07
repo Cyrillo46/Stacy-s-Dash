@@ -13,7 +13,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  text-shadow: 1px 1px 2px #474747;
+  text-shadow: 0px 0px 3px #302f2f;
   color: white;
 }
 
@@ -25,7 +25,7 @@ main {
   margin: 0;
 }
 
-.top-display {
+#top-display {
   font-size: 1.5em;
   display: flex;
   justify-content: space-between;
@@ -33,6 +33,15 @@ main {
 
 h1 {
   text-align: center;
+}
+
+#crypto {
+  display: flex;
+  align-items: center;
+}
+
+#crypto > span {
+  margin-left: 0.5em;
 }
 
 /* 
