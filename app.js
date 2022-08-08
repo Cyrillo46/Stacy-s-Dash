@@ -19,12 +19,11 @@ fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
     document.getElementById(
       "crypto-top"
     ).innerHTML = `<img src="${data.image.small}"> 
-    <span class="crypto-info">${data.symbol}: ${data.market_data.current_price.usd}</span>`;
-    /*
-    document.getElementById("top-display").innerHTML = `
-    <p>🎯 Current: ${data.market_data.current_price.usd}</p>
-    <p>📈 High: ${data.market_data.high_24h.usd}</p>
-    <p>📉 Low: ${data.market_data.low_24h.usd}</p>
+    <span>${data.name}</span>`;
+
+    document.getElementById("crypto-top").innerHTML += `
+       <p>🎯 Current: ${data.market_data.current_price.usd}</p>
+       <p>📈 High: ${data.market_data.high_24h.usd}</p>
+       <p>📉 Low: ${data.market_data.low_24h.usd}</p>
     `;
-    */
   });
