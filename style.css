@@ -12,9 +12,9 @@ body {
   text-shadow: 0px 0px 20px #302f2f;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  /*
-      background-image: url("https://images.unsplash.com/photo-1448518340475-e3c680e9b4be?")
-      */
+  /* 
+body resource: https://css-tricks.com/perfect-full-page-background-image/#awesome-easy-progressive-css3-way
+  */
 }
 
 main {
@@ -41,8 +41,9 @@ h1.time {
 
 #crypto#top-display > span {
   margin-left: 0.5em;
+  margin-bottom: 0.5em;
 }
 
-/* 
-body resource: https://css-tricks.com/perfect-full-page-background-image/#awesome-easy-progressive-css3-way
-*/
+#crypto > p {
+  margin: 0;
+}
