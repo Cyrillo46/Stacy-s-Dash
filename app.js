@@ -27,12 +27,11 @@ fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
        <p>📉 Low: ${data.market_data.low_24h.usd}</p>
     `;
   });
-
 // gets the current time
 function getCurrentTime() {
   let time = new Date();
-  document.getElementsByClassName("time")[0].innerHTML =
-    time.toLocaleTimeString(("en-us", { timeStyle: "short" }));
+  document.getElementsByClassName("time")[0].textContent =
+    time.toLocaleTimeString("en-us", { timeStyle: "short" });
 }
 
 // updates the current time every second
