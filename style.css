@@ -31,8 +31,9 @@ div.top-display {
   justify-content: space-between;
 }
 
-h1.time {
+.time {
   text-align: center;
+  font: 1.8rem;
 }
 
 #crypto {

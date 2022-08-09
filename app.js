@@ -36,3 +36,17 @@ function getCurrentTime() {
 
 // updates the current time every second
 setInterval(getCurrentTime, 1000);
+
+let lon;
+let lat;
+
+// grants us our location
+navigator.geolocation.getCurrentPosition((position) => {
+  console.log(position.coords.longitude, position.coords.latitude);
+  lon = position.coords.longitude;
+  lat = position.coords.latitude;
+});
+
+fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}`)
+  .then((res) => res.json())
+  .then((data) => console.log(data));
