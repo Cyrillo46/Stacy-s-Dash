@@ -37,16 +37,21 @@ function getCurrentTime() {
 // updates the current time every second
 setInterval(getCurrentTime, 1000);
 
-let lon;
-let lat;
-
-// grants us our location
+// gets our location and retrieves the weather.
 navigator.geolocation.getCurrentPosition((position) => {
   console.log(position.coords.longitude, position.coords.latitude);
-  lon = position.coords.longitude;
-  lat = position.coords.latitude;
+  fetch(
+    `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial&appid=29e1c19cb0da9298344a8ac56e806902
+    `
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      document.getElementById("weather").innerHTML = `
+        <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" />
+        <p>${data.name}</p>
+        <p>${data.main.temp}</p>
+    
+      `;
+    });
 });
-
-fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}`)
-  .then((res) => res.json())
-  .then((data) => console.log(data));
