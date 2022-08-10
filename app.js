@@ -48,9 +48,11 @@ navigator.geolocation.getCurrentPosition((position) => {
     .then((data) => {
       console.log(data);
       document.getElementById("weather").innerHTML = `
-        <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" />
+        <img src="http://openweathermap.org/img/wn/${
+          data.weather[0].icon
+        }@2x.png" />
         <p>${data.name}</p>
-        <p>${data.main.temp}</p>
+        <p>${Math.round(data.main.temp)}</p>
     
       `;
     });
