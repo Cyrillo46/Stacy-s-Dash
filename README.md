@@ -36,7 +36,7 @@ To get started with the project locally, follow these steps:
 
    ```bash
    git clone https://github.com/yourusername/yourrepository.git
-   cd yourrepository
+   cd your repository
    open index.html
 
 
